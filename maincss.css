@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;  
+}
+
+body{
+    margin: 0%;
+    padding:0%;
+}
+
+.brand-title{
+    color: white;
+    font-size: 30px;
+    margin: .8rem;
+}
+
+nav {    
+    background-color: #333;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;    
+    flex-wrap: nowrap;    
+}
+
+.nav-container {    
+    margin: 0;
+    padding:0;
+    height: 10%;
+    display: flex;   
+}
+
+.nav-container ul{
+    margin: 0%;
+}
+
+.nav-container li{
+    list-style-type: none; 
+    display: inline-block;          
+}
+
+.nav-container li a {
+    text-decoration: none;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: block;
+    font-size: 20px;
+}
+
+.nav-container li:hover{
+    background-color: gray;    
+}
+
+button {
+    border: none;
+    border-radius: 50px;
+    border-color: black;
+    background-color: white;
+    padding:9px 25px;
+    margin: 0 10px 0 10px;
+}
+
+.toggle-button { 
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+        height: 3px;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+
+}
+
+@media (max-width: 650px){
+    .toggle-button{
+        display:flex;
+    }
+
+     .nav-container{
+        display: none;
+        width: 100%;
+    } 
+
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-container li {
+        display: block;               
+        text-align: center;                       
+    }
+
+    .nav-container button{
+        display: block;
+        margin: 5px;
+
+    }
+    .nav-container a{
+        padding: .5rem;
+    }
+    .nav-container ul{
+        width: 100%;
+        flex-direction: column;
+        padding: 0%;
+    }
+    .nav-container.active{
+        display: flex;
+    }
+}
+
+.errormsg{
+    margin: 0;
+    padding:0;
+    color: red;
+    font-size: 16px;
+}
+
+.signupform-container{
+    position: relative;
+    display: flex;    
+}
+
+.signupform{
+    position: absolute;
+    justify-content: center;
+    align-items: center;   
+}
